@@ -141,7 +141,7 @@ sorted_disks sort_left_to_right(const disk_state& before) {
   return sorted_disks(before, 0);
 }
 
-// Algorithm that sorts disks using the left-to-right algorithm.
+// Algorithm that sorts disks using the lawnmower algorithm.
 sorted_disks sort_lawnmower(const disk_state& before) {
   // TODO: Write code for this function, including rewriting the return
   // statement, and then delete these comments.
