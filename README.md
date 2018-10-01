@@ -4,5 +4,3 @@ Project 1: Implementing Algorithms
 Group members:
 
 Erine Estrella erine.estrella@csu.fullerton.edu
-
-check
