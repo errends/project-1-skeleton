@@ -94,18 +94,36 @@ public:
   // that the first disk at index 0 is dark, the second disk at index 1
   // is light, and so on for the entire row of disks.
   bool is_alternating() const {
-    // TODO: Write code for this function, including rewriting the return
-    // statement, and then delete these comments.
-    return false;
+
+    for (size_t index = 0; index < total_count(); index ++){
+      if((_colors[index] == DISK_DARK && _colors[index +1] == DISK_DARK) ||
+        (_colors[index] == DISK_LIGHT && _colors[index +1] == DISK_LIGHT)) {
+          return false;
+        }
+    }
+    return true;
   }
 
   // Return true when this disk_state is fully sorted, with all light disks
   // on the left (low indices) and all dark disks on the right (high
   // indices).
   bool is_sorted() const {
-    // TODO: Write code for this function, including rewriting the return
-    // statement, and then delete these comments.
-    return false;
+
+    // Checks if there is any dark disks within the first half of the array
+    for(size_t index = 0; index < total_count()/2; index++){
+      if(_colors[index] == DISK_DARK){
+        return false;
+      }
+    }
+    
+    // Checks the second half of the array if there are any light disks
+    for(size_t index = total_count()/2; index < total_count(); index++){
+      if(_colors[index] == DISK_LIGHT){
+        return false;
+      }
+    }
+
+    return true;
   }
 };
 
